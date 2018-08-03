@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController2: UIViewController {
 
+    @IBOutlet weak var magicBallImage: UIImageView!
+    
+    var randomNumber : Int = 0;
+    
+    var ball = ["ball1","ball2","ball3","ball4","ball5"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +27,10 @@ class ViewController2: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func askButton(_ sender: Any) {
+        randomNumber = Int(arc4random_uniform(5))
+        magicBallImage.image = UIImage(named: ball[randomNumber])
     }
-    */
+    
 
 }
