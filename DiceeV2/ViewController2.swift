@@ -32,5 +32,14 @@ class ViewController2: UIViewController {
         magicBallImage.image = UIImage(named: ball[randomNumber])
     }
     
+    @IBAction func goBackToDicee(_ sender: Any) {
+        performSegue(withIdentifier: "diceeView", sender: self)
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            askButton(self)
+        }
+    }
 
 }

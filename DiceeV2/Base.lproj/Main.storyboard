@@ -37,7 +37,7 @@
                                     <color key="titleColor" red="0.9423058126067706" green="1" blue="0.28050335883585542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="rollButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kc5-sv-oub"/>
+                                    <action selector="rollButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x5x-rO-ERw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8w-IO-Wr5">
@@ -48,15 +48,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6O-ua-PwD">
-                                <rect key="frame" x="6" y="37" width="143" height="29"/>
+                                <rect key="frame" x="0.0" y="37" width="164" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
-                                <state key="normal" title="fortune teller">
+                                <state key="normal" title=" fortune teller ">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="optionalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gha-Le-jpJ"/>
-                                    <segue destination="I5z-IW-P2z" kind="show" identifier="nextView" id="0cp-8h-G7T"/>
+                                    <segue destination="I5z-IW-P2z" kind="show" identifier="magic8BallView" id="0cp-8h-G7T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,8 +66,8 @@
                     <connections>
                         <outlet property="diceImage" destination="Vlo-Eh-5bD" id="ztp-Wp-MGW"/>
                         <outlet property="diceeGeneratorLabel" destination="dvh-Me-jIU" id="ldB-nW-bJR"/>
+                        <outlet property="goToFortuneTellerButton" destination="u6O-ua-PwD" id="UkK-tv-pRq"/>
                         <outlet property="numOfRollsLabel" destination="E8w-IO-Wr5" id="YMT-ku-1ZZ"/>
-                        <outlet property="rollButtonImage" destination="Yk6-Mp-cKx" id="frz-We-tJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,6 +102,18 @@
                                 </state>
                                 <connections>
                                     <action selector="askButton:" destination="I5z-IW-P2z" eventType="touchUpInside" id="SXM-N2-Hj6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCw-CC-DDE">
+                                <rect key="frame" x="17" y="43" width="52" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <state key="normal" title="dicee">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackToDicee:" destination="I5z-IW-P2z" eventType="touchUpInside" id="TSy-tO-gRf"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="diceeView" id="bJa-7B-GnM"/>
                                 </connections>
                             </button>
                         </subviews>

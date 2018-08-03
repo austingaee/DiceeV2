@@ -15,14 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var numOfRollsLabel: UILabel!
     @IBOutlet weak var diceeGeneratorLabel: UILabel!
     
-    @IBOutlet weak var rollButtonImage: UIButton!
+    @IBOutlet weak var goToFortuneTellerButton: UIButton!
     
     var diceNumber : Int = 0
     var numberOfRolls : Int = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        goToFortuneTellerButton.layer.borderWidth = 1.0
+        goToFortuneTellerButton.layer.borderColor = UIColor.white.cgColor
         updateRandomDiceImage()
     }
 
@@ -51,7 +52,7 @@ class ViewController: UIViewController {
     
     //going to the next view
     @IBAction func optionalButton(_ sender: Any) {
-        performSegue(withIdentifier: "nextView", sender: self)
+        performSegue(withIdentifier: "magic8BallView", sender: self)
     }
     
     //motion detector
