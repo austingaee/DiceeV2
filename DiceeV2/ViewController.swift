@@ -16,22 +16,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceeGeneratorLabel: UILabel!
     
     @IBOutlet weak var goToFortuneTellerButton: UIButton!
+    @IBOutlet weak var rollDiceButton: UIButton!
     
     var diceNumber : Int = 0
     var numberOfRolls : Int = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        goToFortuneTellerButton.layer.borderWidth = 1.0
-        goToFortuneTellerButton.layer.borderColor = UIColor.white.cgColor
+        borderDesign()
         updateRandomDiceImage()
     }
-
+    
+    func borderDesign() {
+        goToFortuneTellerButton.layer.borderWidth = 1.0
+        goToFortuneTellerButton.layer.borderColor = UIColor.black.cgColor
+        goToFortuneTellerButton.layer.cornerRadius = 10.0
+        
+        rollDiceButton.layer.borderWidth = 1.0
+        rollDiceButton.layer.borderColor = UIColor.yellow.cgColor
+        rollDiceButton.layer.cornerRadius = 10.0
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     //changes the dice image if button is pressed
     @IBAction func rollButton(_ sender: UIButton) {

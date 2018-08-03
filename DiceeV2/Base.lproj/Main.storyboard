@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dicee generator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvh-Me-jIU">
-                                <rect key="frame" x="29" y="94" width="316" height="35"/>
+                                <rect key="frame" x="29" y="116" width="316" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="35"/>
                                 <color key="textColor" red="0.95067154535008092" green="1" blue="0.26662666527496648" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -29,17 +29,6 @@
                                 <rect key="frame" x="82" y="233" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yk6-Mp-cKx">
-                                <rect key="frame" x="145" y="522" width="85" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="35"/>
-                                <state key="normal" title="roll">
-                                    <color key="titleColor" red="0.9423058126067706" green="1" blue="0.28050335883585542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="rollButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x5x-rO-ERw"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8w-IO-Wr5">
                                 <rect key="frame" x="310" y="37" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6O-ua-PwD">
-                                <rect key="frame" x="0.0" y="37" width="164" height="29"/>
+                                <rect key="frame" x="16" y="37" width="164" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
                                 <state key="normal" title=" fortune teller ">
@@ -57,6 +46,17 @@
                                 <connections>
                                     <action selector="optionalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gha-Le-jpJ"/>
                                     <segue destination="I5z-IW-P2z" kind="show" identifier="magic8BallView" id="0cp-8h-G7T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yk6-Mp-cKx">
+                                <rect key="frame" x="118" y="521" width="138" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="35"/>
+                                <state key="normal" title=" roll ">
+                                    <color key="titleColor" red="0.9423058126067706" green="1" blue="0.28050335883585542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="rollButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x5x-rO-ERw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,11 +68,12 @@
                         <outlet property="diceeGeneratorLabel" destination="dvh-Me-jIU" id="ldB-nW-bJR"/>
                         <outlet property="goToFortuneTellerButton" destination="u6O-ua-PwD" id="UkK-tv-pRq"/>
                         <outlet property="numOfRollsLabel" destination="E8w-IO-Wr5" id="YMT-ku-1ZZ"/>
+                        <outlet property="rollDiceButton" destination="Yk6-Mp-cKx" id="jXq-ds-1Rg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="140"/>
+            <point key="canvasLocation" x="-378.39999999999998" y="139.880059970015"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="lQd-WY-cAf">
