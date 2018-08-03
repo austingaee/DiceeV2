@@ -13,10 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImage: UIImageView!
     
     @IBOutlet weak var numOfRollsLabel: UILabel!
+    @IBOutlet weak var diceeGeneratorLabel: UILabel!
     
     @IBOutlet weak var rollButtonImage: UIButton!
-    @IBOutlet weak var optionalButtonImage: UIButton!
-    @IBOutlet weak var goBackButtonImage: UIButton!
     
     var diceNumber : Int = 0
     var numberOfRolls : Int = 0;
@@ -25,9 +24,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         updateRandomDiceImage()
-        
-        //initially hides the goBackButtonImage
-        self.goBackButtonImage.isHidden = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,28 +31,39 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     //changes the dice image if button is pressed
     @IBAction func rollButton(_ sender: UIButton) {
         updateRandomDiceImage()
-        
-        numberOfRolls = numberOfRolls + 1
-        numOfRollsLabel.text = String(numberOfRolls)
+        outputNumberOfRolls()
     }
     
     func updateRandomDiceImage() {
         diceNumber = Int(arc4random_uniform(6) + 1)
+        
         diceImage.image = UIImage(named: "dice" + String(diceNumber))
     }
+    func outputNumberOfRolls() {
+        numberOfRolls = numberOfRolls + 1
+        
+        numOfRollsLabel.text = String(numberOfRolls)
+    }
     
-    // optionalButton is hidden when goBackButton is pressed & vice versa
+    //going to the next view
     @IBAction func optionalButton(_ sender: Any) {
-        self.optionalButtonImage.isHidden = true
-        self.goBackButtonImage.isHidden = false;
+        performSegue(withIdentifier: "nextView", sender: self)
     }
-    @IBAction func goBackButton(_ sender: Any) {
-        self.goBackButtonImage.isHidden = true;
-        self.optionalButtonImage.isHidden = false;
+    
+    //motion detector
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            updateRandomDiceImage()
+            outputNumberOfRolls()
+        }
     }
-    //
+    
+    
+
+
 }
 
