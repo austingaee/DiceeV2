@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     }
     
     func borderDesign() {
+        //Button Design
         goToFortuneTellerButton.layer.borderWidth = 1.0
         goToFortuneTellerButton.layer.borderColor = UIColor.black.cgColor
         goToFortuneTellerButton.layer.cornerRadius = 10.0
